@@ -1,0 +1,9 @@
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\bin\Debug\DB.dacpac
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\bin\Debug\DB.dll
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\bin\Debug\DB.pdb
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\DB.dll
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\DB.pdb
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\Model.xml
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\refactor.xml
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\postdeploy.sql
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\predeploy.sql

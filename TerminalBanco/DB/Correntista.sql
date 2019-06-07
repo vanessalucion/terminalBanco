@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Correntista]
+(
+	[Id] INT  IDENTITY (1,1 ) NOT NULL,
+	[CPF] VARCHAR (11) NULL,
+	[Nome] VARCHAR (50) NULL,
+	PRIMARY KEY CLUSTERED ([Id] ASC)
+);
