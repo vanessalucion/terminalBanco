@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       Primary Key: unnamed constraint on [dbo].[Conta]
+       Primary Key: unnamed constraint on [dbo].[Lancamento]
+     Possible data issues
+       None
+
+** User actions
+     Create
+       Primary Key: unnamed constraint on [dbo].[Conta] (Primary Key)
+       Primary Key: unnamed constraint on [dbo].[Lancamento] (Primary Key)
+       [dbo].[FK_Conta_ToCorrentista] (Foreign Key)
+       [dbo].[FK_Lancamento_ToConta] (Foreign Key)
+
+** Supporting actions

@@ -7,3 +7,4 @@ C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoF
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\refactor.xml
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\postdeploy.sql
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\predeploy.sql
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\DB\obj\Debug\DB.sqlprojAssemblyReference.cache

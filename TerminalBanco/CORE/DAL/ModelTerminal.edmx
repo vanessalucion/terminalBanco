@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="terminalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'terminal.dbo.Conta' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Conta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CorrentistaId" Type="int" />
+          <Property Name="LimiteCredito" Type="money" />
+          <Property Name="Saldo" Type="money" />
+          <Property Name="DataAbertura" Type="date" />
+        </EntityType>
+        <EntityType Name="Correntista">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CPF" Type="varchar" MaxLength="11" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'terminal.dbo.Lancamento' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Lancamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="date" />
+          <Property Name="ContaId" Type="int" />
+          <Property Name="Operacao" Type="varchar" MaxLength="50" />
+          <Property Name="Historico" Type="varchar" MaxLength="50" />
+          <Property Name="Valor" Type="money" />
+        </EntityType>
+        <EntityContainer Name="terminalModelStoreContainer">
+          <EntitySet Name="Correntista" EntityType="Self.Correntista" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Conta" EntityType="Self.Conta" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Conta].[Id] AS [Id], 
+    [Conta].[CorrentistaId] AS [CorrentistaId], 
+    [Conta].[LimiteCredito] AS [LimiteCredito], 
+    [Conta].[Saldo] AS [Saldo], 
+    [Conta].[DataAbertura] AS [DataAbertura]
+    FROM [dbo].[Conta] AS [Conta]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lancamento" EntityType="Self.Lancamento" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Lancamento].[Id] AS [Id], 
+    [Lancamento].[Data] AS [Data], 
+    [Lancamento].[ContaId] AS [ContaId], 
+    [Lancamento].[Operacao] AS [Operacao], 
+    [Lancamento].[Historico] AS [Historico], 
+    [Lancamento].[Valor] AS [Valor]
+    FROM [dbo].[Lancamento] AS [Lancamento]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="terminalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Correntista">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Conta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CorrentistaId" Type="Int32" />
+          <Property Name="LimiteCredito" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Saldo" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DataAbertura" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Lancamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Precision="0" />
+          <Property Name="ContaId" Type="Int32" />
+          <Property Name="Operacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Historico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityContainer Name="terminalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Correntistas" EntityType="Self.Correntista" />
+          <EntitySet Name="Contas" EntityType="Self.Conta" />
+          <EntitySet Name="Lancamentoes" EntityType="Self.Lancamento" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="terminalModelStoreContainer" CdmEntityContainer="terminalEntities">
+          <EntitySetMapping Name="Correntistas">
+            <EntityTypeMapping TypeName="terminalModel.Correntista">
+              <MappingFragment StoreEntitySet="Correntista">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contas">
+            <EntityTypeMapping TypeName="terminalModel.Conta">
+              <MappingFragment StoreEntitySet="Conta">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CorrentistaId" ColumnName="CorrentistaId" />
+                <ScalarProperty Name="LimiteCredito" ColumnName="LimiteCredito" />
+                <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+                <ScalarProperty Name="DataAbertura" ColumnName="DataAbertura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lancamentoes">
+            <EntityTypeMapping TypeName="terminalModel.Lancamento">
+              <MappingFragment StoreEntitySet="Lancamento">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="ContaId" ColumnName="ContaId" />
+                <ScalarProperty Name="Operacao" ColumnName="Operacao" />
+                <ScalarProperty Name="Historico" ColumnName="Historico" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
