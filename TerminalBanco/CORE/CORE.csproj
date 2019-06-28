@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSSINES\IEntidade.cs" />
+    <Compile Include="BUSSINES\OnConta.cs" />
+    <Compile Include="BUSSINES\OnCorrentista.cs" />
+    <Compile Include="BUSSINES\OnLancamento.cs" />
     <Compile Include="DAL\Conta.cs">
       <DependentUpon>ModelTerminal.tt</DependentUpon>
     </Compile>
@@ -76,9 +80,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUSSINES\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <EntityDeploy Include="DAL\ModelTerminal.edmx">
