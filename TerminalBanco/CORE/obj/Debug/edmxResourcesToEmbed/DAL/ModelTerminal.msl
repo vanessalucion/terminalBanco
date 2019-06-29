@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="terminalModelStoreContainer" CdmEntityContainer="terminalEntities">
+    <EntitySetMapping Name="Correntistas">
+      <EntityTypeMapping TypeName="terminalModel.Correntista">
+        <MappingFragment StoreEntitySet="Correntista">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contas">
+      <EntityTypeMapping TypeName="terminalModel.Conta">
+        <MappingFragment StoreEntitySet="Conta">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CorrentistaId" ColumnName="CorrentistaId" />
+          <ScalarProperty Name="LimiteCredito" ColumnName="LimiteCredito" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="DataAbertura" ColumnName="DataAbertura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lancamentoes">
+      <EntityTypeMapping TypeName="terminalModel.Lancamento">
+        <MappingFragment StoreEntitySet="Lancamento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="ContaId" ColumnName="ContaId" />
+          <ScalarProperty Name="Operacao" ColumnName="Operacao" />
+          <ScalarProperty Name="Historico" ColumnName="Historico" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

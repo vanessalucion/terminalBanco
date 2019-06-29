@@ -1,0 +1,12 @@
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\CORE.dll.config
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\CORE.dll
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\CORE.pdb
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\EntityFramework.dll
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\EntityFramework.xml
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\obj\Debug\CORE.csprojAssemblyReference.cache
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\obj\Debug\CORE.csproj.CoreCompileInputs.cache
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\obj\Debug\CORE.csproj.CopyComplete
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\obj\Debug\CORE.dll
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\CORE\obj\Debug\CORE.pdb

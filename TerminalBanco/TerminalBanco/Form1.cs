@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TerminalBanco
 {
-    public partial class Form1 : Form
+    public partial class FormConta : Form
     {
-        public Form1()
+        public FormConta()
         {
             InitializeComponent();
+        }
+
+        private void FormConta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

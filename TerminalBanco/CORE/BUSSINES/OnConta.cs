@@ -11,22 +11,66 @@ namespace CORE.BUSSINES
     {
         public void Excluir(Conta registro)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var db = new terminalEntities())
+                {
+                    db.Entry(registro).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public List<Conta> Lista()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var db = new terminalEntities())
+                {
+                    return db.Contas.Include("Correntista").ToList();
+                 
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void Novo(Conta registro)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var db = new terminalEntities())
+                {
+                    db.Contas.Add(registro);
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void Salvar(Conta registro)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var db = new terminalEntities())
+                {
+                    db.Entry(registro).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

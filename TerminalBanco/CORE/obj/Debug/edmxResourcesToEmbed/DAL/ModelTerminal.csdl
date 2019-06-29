@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="terminalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Correntista">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Conta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CorrentistaId" Type="Int32" />
+    <Property Name="LimiteCredito" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Saldo" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DataAbertura" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Lancamento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="DateTime" Precision="0" />
+    <Property Name="ContaId" Type="Int32" />
+    <Property Name="Operacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Historico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityContainer Name="terminalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Correntistas" EntityType="Self.Correntista" />
+    <EntitySet Name="Contas" EntityType="Self.Conta" />
+    <EntitySet Name="Lancamentoes" EntityType="Self.Lancamento" />
+  </EntityContainer>
+</Schema>
