@@ -14,8 +14,17 @@ namespace CORE.DAL
     
     public partial class Correntista
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Correntista()
+        {
+            this.Contas = new HashSet<Conta>();
+        }
+    
         public int Id { get; set; }
         public string CPF { get; set; }
         public string Nome { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Conta> Contas { get; set; }
     }
 }

@@ -14,10 +14,20 @@ namespace CORE.DAL
     
     public partial class Conta
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Conta()
+        {
+            this.Lancamentoes = new HashSet<Lancamento>();
+        }
+    
         public int Id { get; set; }
         public Nullable<int> CorrentistaId { get; set; }
         public Nullable<decimal> LimiteCredito { get; set; }
         public Nullable<decimal> Saldo { get; set; }
         public Nullable<System.DateTime> DataAbertura { get; set; }
+    
+        public virtual Correntista Correntista { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Lancamento> Lancamentoes { get; set; }
     }
 }

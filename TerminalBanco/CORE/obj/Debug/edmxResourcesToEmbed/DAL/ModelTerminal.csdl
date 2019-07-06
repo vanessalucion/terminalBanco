@@ -7,6 +7,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
     <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contas" Relationship="terminalModel.FK_Conta_ToCorrentista" FromRole="Correntista" ToRole="Conta" />
   </EntityType>
   <EntityType Name="Conta">
     <Key>
@@ -17,6 +18,8 @@
     <Property Name="LimiteCredito" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="Saldo" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="DataAbertura" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Correntista" Relationship="terminalModel.FK_Conta_ToCorrentista" FromRole="Conta" ToRole="Correntista" />
+    <NavigationProperty Name="Lancamentoes" Relationship="terminalModel.FK_Lancamento_ToConta" FromRole="Conta" ToRole="Lancamento" />
   </EntityType>
   <EntityType Name="Lancamento">
     <Key>
@@ -28,10 +31,43 @@
     <Property Name="Operacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Historico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Valor" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Conta" Relationship="terminalModel.FK_Lancamento_ToConta" FromRole="Lancamento" ToRole="Conta" />
   </EntityType>
   <EntityContainer Name="terminalEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Correntistas" EntityType="Self.Correntista" />
     <EntitySet Name="Contas" EntityType="Self.Conta" />
     <EntitySet Name="Lancamentoes" EntityType="Self.Lancamento" />
+    <AssociationSet Name="FK_Conta_ToCorrentista" Association="terminalModel.FK_Conta_ToCorrentista">
+      <End Role="Correntista" EntitySet="Correntistas" />
+      <End Role="Conta" EntitySet="Contas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lancamento_ToConta" Association="terminalModel.FK_Lancamento_ToConta">
+      <End Role="Conta" EntitySet="Contas" />
+      <End Role="Lancamento" EntitySet="Lancamentoes" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_Conta_ToCorrentista">
+    <End Type="terminalModel.Correntista" Role="Correntista" Multiplicity="0..1" />
+    <End Type="terminalModel.Conta" Role="Conta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Correntista">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Conta">
+        <PropertyRef Name="CorrentistaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lancamento_ToConta">
+    <End Type="terminalModel.Conta" Role="Conta" Multiplicity="0..1" />
+    <End Type="terminalModel.Lancamento" Role="Lancamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conta">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lancamento">
+        <PropertyRef Name="ContaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

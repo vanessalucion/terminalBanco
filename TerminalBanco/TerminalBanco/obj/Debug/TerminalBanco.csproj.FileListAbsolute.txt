@@ -16,3 +16,4 @@ C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoF
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\bin\Debug\CORE.dll
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\bin\Debug\CORE.pdb
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\bin\Debug\CORE.dll.config
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.Cadastro_de_Conta.resources

@@ -20,5 +20,7 @@ namespace CORE.DAL
         public string Operacao { get; set; }
         public string Historico { get; set; }
         public Nullable<decimal> Valor { get; set; }
+    
+        public virtual Conta Conta { get; set; }
     }
 }

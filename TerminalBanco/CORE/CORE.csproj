@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSSINES\EnumOperacoes.cs" />
     <Compile Include="BUSSINES\IEntidade.cs" />
     <Compile Include="BUSSINES\OnConta.cs" />
     <Compile Include="BUSSINES\OnCorrentista.cs" />

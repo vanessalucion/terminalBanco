@@ -7,7 +7,9 @@
       <Diagram DiagramId="7d47d72c7841477caf39a9ca84b611f3" Name="Diagram1">
         <EntityTypeShape EntityType="terminalModel.Correntista" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="terminalModel.Conta" Width="1.5" PointX="3.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="terminalModel.Lancamento" Width="1.5" PointX="6.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="terminalModel.Lancamento" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="terminalModel.FK_Conta_ToCorrentista" />
+        <AssociationConnector Association="terminalModel.FK_Lancamento_ToConta" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

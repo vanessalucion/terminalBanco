@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="terminalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'terminal.dbo.Conta' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Conta">
     <Key>
       <PropertyRef Name="Id" />
@@ -20,8 +18,6 @@ warning 6002: The table/view 'terminal.dbo.Conta' does not have a primary key de
     <Property Name="CPF" Type="varchar" MaxLength="11" />
     <Property Name="Nome" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'terminal.dbo.Lancamento' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Lancamento">
     <Key>
       <PropertyRef Name="Id" />
@@ -33,26 +29,41 @@ warning 6002: The table/view 'terminal.dbo.Lancamento' does not have a primary k
     <Property Name="Historico" Type="varchar" MaxLength="50" />
     <Property Name="Valor" Type="money" />
   </EntityType>
+  <Association Name="FK_Conta_ToCorrentista">
+    <End Role="Correntista" Type="Self.Correntista" Multiplicity="0..1" />
+    <End Role="Conta" Type="Self.Conta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Correntista">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Conta">
+        <PropertyRef Name="CorrentistaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lancamento_ToConta">
+    <End Role="Conta" Type="Self.Conta" Multiplicity="0..1" />
+    <End Role="Lancamento" Type="Self.Lancamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conta">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lancamento">
+        <PropertyRef Name="ContaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="terminalModelStoreContainer">
+    <EntitySet Name="Conta" EntityType="Self.Conta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Correntista" EntityType="Self.Correntista" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Conta" EntityType="Self.Conta" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Conta].[Id] AS [Id], 
-    [Conta].[CorrentistaId] AS [CorrentistaId], 
-    [Conta].[LimiteCredito] AS [LimiteCredito], 
-    [Conta].[Saldo] AS [Saldo], 
-    [Conta].[DataAbertura] AS [DataAbertura]
-    FROM [dbo].[Conta] AS [Conta]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Lancamento" EntityType="Self.Lancamento" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Lancamento].[Id] AS [Id], 
-    [Lancamento].[Data] AS [Data], 
-    [Lancamento].[ContaId] AS [ContaId], 
-    [Lancamento].[Operacao] AS [Operacao], 
-    [Lancamento].[Historico] AS [Historico], 
-    [Lancamento].[Valor] AS [Valor]
-    FROM [dbo].[Lancamento] AS [Lancamento]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Lancamento" EntityType="Self.Lancamento" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Conta_ToCorrentista" Association="Self.FK_Conta_ToCorrentista">
+      <End Role="Correntista" EntitySet="Correntista" />
+      <End Role="Conta" EntitySet="Conta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lancamento_ToConta" Association="Self.FK_Lancamento_ToConta">
+      <End Role="Conta" EntitySet="Conta" />
+      <End Role="Lancamento" EntitySet="Lancamento" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
