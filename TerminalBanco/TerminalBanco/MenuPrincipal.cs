@@ -24,7 +24,8 @@ namespace TerminalBanco
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            var form = new Extrato();
+            form.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace TerminalBanco
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var form = new MenuPrincipal();
+            var form = new FormSaldo();
             form.ShowDialog();
         }
     }
