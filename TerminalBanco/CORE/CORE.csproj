@@ -80,6 +80,7 @@
       <DependentUpon>ModelTerminal.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\ViewLancamento.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

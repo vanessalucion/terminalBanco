@@ -59,6 +59,42 @@
     <Compile Include="CadastroConta.Designer.cs">
       <DependentUpon>CadastroConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroCorrentista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCorrentista.Designer.cs">
+      <DependentUpon>CadastroCorrentista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extrato.Designer.cs">
+      <DependentUpon>Extrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaldo.Designer.cs">
+      <DependentUpon>FormSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lancamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lancamento.Designer.cs">
+      <DependentUpon>Lancamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdm.Designer.cs">
+      <DependentUpon>MenuAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TabelaConta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +103,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabelaCorrentista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabelaCorrentista.Designer.cs">
+      <DependentUpon>TabelaCorrentista.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CadastroConta.resx">
       <DependentUpon>CadastroConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCorrentista.resx">
+      <DependentUpon>CadastroCorrentista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extrato.resx">
+      <DependentUpon>Extrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaldo.resx">
+      <DependentUpon>FormSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lancamento.resx">
+      <DependentUpon>Lancamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdm.resx">
+      <DependentUpon>MenuAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabelaConta.resx">
       <DependentUpon>TabelaConta.cs</DependentUpon>
@@ -82,6 +142,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TabelaCorrentista.resx">
+      <DependentUpon>TabelaCorrentista.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CORE.DAL.Conta.datasource" />
     <None Include="Properties\DataSources\CORE.DAL.Correntista.datasource" />

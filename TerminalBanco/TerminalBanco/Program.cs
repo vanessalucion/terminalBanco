@@ -16,7 +16,7 @@ namespace TerminalBanco
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormConta());
+            Application.Run(new MenuPrincipal());
         }
     }
 }

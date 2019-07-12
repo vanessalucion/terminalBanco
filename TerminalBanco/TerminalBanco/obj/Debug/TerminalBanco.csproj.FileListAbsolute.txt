@@ -17,3 +17,10 @@ C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoF
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\bin\Debug\CORE.pdb
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\bin\Debug\CORE.dll.config
 C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.Cadastro_de_Conta.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.Lancamento.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.MenuAdm.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.MenuPrincipal.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.TabelaCorrentista.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.CadastroCorrentista.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.Extrato.resources
+C:\Users\User\Dropbox\ADS\Tópicos Avançados em Programação Desktop\trabalhoFInal\terminalBanco\TerminalBanco\TerminalBanco\obj\Debug\TerminalBanco.FormSaldo.resources

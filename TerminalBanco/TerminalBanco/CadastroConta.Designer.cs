@@ -29,25 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_de_Conta));
             System.Windows.Forms.Label correntistaIdLabel;
             System.Windows.Forms.Label dataAberturaLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label limiteCreditoLabel;
             System.Windows.Forms.Label saldoLabel;
-            this.contaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_de_Conta));
             this.contaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.contaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.correntistaIdTextBox = new System.Windows.Forms.TextBox();
             this.dataAberturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -56,19 +55,61 @@
             this.saldoTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.contaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             correntistaIdLabel = new System.Windows.Forms.Label();
             dataAberturaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             limiteCreditoLabel = new System.Windows.Forms.Label();
             saldoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.contaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contaBindingNavigator)).BeginInit();
             this.contaBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // contaBindingSource
+            // correntistaIdLabel
             // 
-            this.contaBindingSource.DataSource = typeof(CORE.DAL.Conta);
+            correntistaIdLabel.AutoSize = true;
+            correntistaIdLabel.Location = new System.Drawing.Point(9, 132);
+            correntistaIdLabel.Name = "correntistaIdLabel";
+            correntistaIdLabel.Size = new System.Drawing.Size(72, 13);
+            correntistaIdLabel.TabIndex = 1;
+            correntistaIdLabel.Text = "Correntista Id:";
+            // 
+            // dataAberturaLabel
+            // 
+            dataAberturaLabel.AutoSize = true;
+            dataAberturaLabel.Location = new System.Drawing.Point(5, 93);
+            dataAberturaLabel.Name = "dataAberturaLabel";
+            dataAberturaLabel.Size = new System.Drawing.Size(76, 13);
+            dataAberturaLabel.TabIndex = 3;
+            dataAberturaLabel.Text = "Data Abertura:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(62, 50);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 5;
+            idLabel.Text = "Id:";
+            // 
+            // limiteCreditoLabel
+            // 
+            limiteCreditoLabel.AutoSize = true;
+            limiteCreditoLabel.Location = new System.Drawing.Point(8, 178);
+            limiteCreditoLabel.Name = "limiteCreditoLabel";
+            limiteCreditoLabel.Size = new System.Drawing.Size(73, 13);
+            limiteCreditoLabel.TabIndex = 7;
+            limiteCreditoLabel.Text = "Limite Credito:";
+            // 
+            // saldoLabel
+            // 
+            saldoLabel.AutoSize = true;
+            saldoLabel.Location = new System.Drawing.Point(44, 220);
+            saldoLabel.Name = "saldoLabel";
+            saldoLabel.Size = new System.Drawing.Size(37, 13);
+            saldoLabel.TabIndex = 9;
+            saldoLabel.Text = "Saldo:";
             // 
             // contaBindingNavigator
             // 
@@ -99,6 +140,32 @@
             this.contaBindingNavigator.Size = new System.Drawing.Size(300, 25);
             this.contaBindingNavigator.TabIndex = 0;
             this.contaBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -132,16 +199,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -164,26 +224,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // contaBindingNavigatorSaveItem
             // 
@@ -194,15 +236,6 @@
             this.contaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.contaBindingNavigatorSaveItem.Text = "Salvar Dados";
             // 
-            // correntistaIdLabel
-            // 
-            correntistaIdLabel.AutoSize = true;
-            correntistaIdLabel.Location = new System.Drawing.Point(9, 132);
-            correntistaIdLabel.Name = "correntistaIdLabel";
-            correntistaIdLabel.Size = new System.Drawing.Size(72, 13);
-            correntistaIdLabel.TabIndex = 1;
-            correntistaIdLabel.Text = "Correntista Id:";
-            // 
             // correntistaIdTextBox
             // 
             this.correntistaIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contaBindingSource, "CorrentistaId", true));
@@ -210,15 +243,6 @@
             this.correntistaIdTextBox.Name = "correntistaIdTextBox";
             this.correntistaIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.correntistaIdTextBox.TabIndex = 2;
-            // 
-            // dataAberturaLabel
-            // 
-            dataAberturaLabel.AutoSize = true;
-            dataAberturaLabel.Location = new System.Drawing.Point(5, 93);
-            dataAberturaLabel.Name = "dataAberturaLabel";
-            dataAberturaLabel.Size = new System.Drawing.Size(76, 13);
-            dataAberturaLabel.TabIndex = 3;
-            dataAberturaLabel.Text = "Data Abertura:";
             // 
             // dataAberturaDateTimePicker
             // 
@@ -228,15 +252,6 @@
             this.dataAberturaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dataAberturaDateTimePicker.TabIndex = 4;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(62, 50);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 5;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contaBindingSource, "Id", true));
@@ -245,15 +260,6 @@
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 6;
             // 
-            // limiteCreditoLabel
-            // 
-            limiteCreditoLabel.AutoSize = true;
-            limiteCreditoLabel.Location = new System.Drawing.Point(8, 178);
-            limiteCreditoLabel.Name = "limiteCreditoLabel";
-            limiteCreditoLabel.Size = new System.Drawing.Size(73, 13);
-            limiteCreditoLabel.TabIndex = 7;
-            limiteCreditoLabel.Text = "Limite Credito:";
-            // 
             // limiteCreditoTextBox
             // 
             this.limiteCreditoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contaBindingSource, "LimiteCredito", true));
@@ -261,15 +267,6 @@
             this.limiteCreditoTextBox.Name = "limiteCreditoTextBox";
             this.limiteCreditoTextBox.Size = new System.Drawing.Size(100, 20);
             this.limiteCreditoTextBox.TabIndex = 8;
-            // 
-            // saldoLabel
-            // 
-            saldoLabel.AutoSize = true;
-            saldoLabel.Location = new System.Drawing.Point(44, 220);
-            saldoLabel.Name = "saldoLabel";
-            saldoLabel.Size = new System.Drawing.Size(37, 13);
-            saldoLabel.TabIndex = 9;
-            saldoLabel.Text = "Saldo:";
             // 
             // saldoTextBox
             // 
@@ -299,6 +296,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // contaBindingSource
+            // 
+            this.contaBindingSource.DataSource = typeof(CORE.DAL.Conta);
+            // 
             // Cadastro_de_Conta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,10 +321,10 @@
             this.Name = "Cadastro_de_Conta";
             this.Text = "Cadastro_de_Conta";
             this.Load += new System.EventHandler(this.Cadastro_de_Conta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.contaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contaBindingNavigator)).EndInit();
             this.contaBindingNavigator.ResumeLayout(false);
             this.contaBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
